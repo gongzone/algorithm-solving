@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1639482196 source:c:\users\pc\desktop\백준\1006-습격자초라기(p3)\main.cpp
+	<iostream>
+	<cstring>
+	<limits>
+	<algorithm>
+
