@@ -78,7 +78,6 @@ int main()
     {
         char temp[5];
         scanf("%s", temp);
-
         command = temp;
 
         if(command == "push")
