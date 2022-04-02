@@ -1,8 +1,8 @@
-const fs = require("fs");
-const input = fs.readFileSync("/dev/stdin").toString().split("\n");
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 const n = parseInt(input[0]);
-const graph = input.slice(1, n + 1).map((el) => el.split(""));
+const graph = input.slice(1, n + 1).map((el) => el.split(''));
 const counts = [];
 
 const dfs = (x, y) => {
