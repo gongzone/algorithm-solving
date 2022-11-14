@@ -1,6 +1,7 @@
 // Array: 항목들을 순서에 따라 정리해놓은 자료구조. (One after another in memory)
 
 // Operations:
+// - search O(n)
 // - lookup O(1)
 // - push(append) O(1) * can be O(n) in dynamic array
 // - insert O(n)
