@@ -12,3 +12,33 @@
   Input: head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
   Output: [1,2,3,7,8,11,12,9,10,4,5,6]
 */
+
+// T: O(n), S: O(1)
+const flatten = (head) => {
+  if (!head) return head;
+
+  let currentNode = head;
+
+  while (currentNode !== null) {
+    if (currentNode.child === null) {
+      currentNode = currentNode.next;
+    } else {
+      let tail = currentNode.child;
+
+      while (tail.next !== null) {
+        tail = tail.next;
+      }
+
+      tail.next = currentNode.next;
+      if (tail.next !== null) {
+        tail.next.prev = tail;
+      }
+
+      currentNode.next = currentNode.child;
+      currentNode.next.prev = currentNode;
+      currentNode.child = null;
+    }
+  }
+
+  return head;
+};
